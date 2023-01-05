@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body{
+        width: 300px;
+        text-align: center;
+      }
+      input {
+        outline: none;
+      }
+      label{
+        font-weight: bold;
+      }
+      .h-26{
+        height: 26px !important;
+      }
+      .w-50{
+        width: 50px;;
+      }
+      .btn-blue {
+        background-color: #2c75ce; /* Green */
+        border: none;
+        color: white;
+        padding: 2px 6px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 2px;
+      }
+      .view{
+        margin-left: 15px;
+      }
+
+      hr{
+        border-top: 3px solid #bbb;
+      }
+
+      .checkbox-container{
+        vertical-align: middle;
+      }
+      
+
+    </style>
+  </head>
+  <body>
+    <span>Type the secret API key<input type="password" id="secretAPIKEY" placeholder="secret API KEY" class="h-20 w-50"></span>
+    <button id="apiupdate" class="h-20">Update</button>
+    <br>
+    <br>
+    <hr></hr>
+    <br>
+    <input type="text" id="addPseudo" placeholder="id" class="h-20 w-50"></input>
+    <button id="w2pclick" class="h-20">Inspect ID</button>
+    <pre><code id="code_for_json"></code></pre>
+    <script src="changePseudo.js"></script>
+  </body>
+</html>
