@@ -42,17 +42,24 @@
       
 
     </style>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
   </head>
   <body>
-    <span>Type the secret API key<input type="password" id="secretAPIKEY" placeholder="secret API KEY" class="h-20 w-50"></span>
+    <span>URL of CORS server<input type="text" id="cors" placeholder="cors url" class="h-20 w-50"></span>
+    <button id="corsupdate" class="h-20">Update</button>
+    <br>
+    <span>URL of n8n endpoint<input type="text" id="n8n" placeholder="n8n url" class="h-20 w-50"></span>
+    <button id="n8nupdate" class="h-20">Update</button>
+    <br>
+    <span>Type the secret API key<input type="password" id="api" placeholder="secret API KEY" class="h-20 w-50"></span>
     <button id="apiupdate" class="h-20">Update</button>
     <br>
     <br>
     <hr></hr>
     <br>
-    <input type="text" id="addPseudo" placeholder="id" class="h-20 w-50"></input>
+    <input type="text" id="idtoinspect" placeholder="id" class="h-20 w-50"></input>
     <button id="w2pclick" class="h-20">Inspect ID</button>
-    <pre><code id="code_for_json"></code></pre>
+    <pre><code id="code_for_json"  class="prettyprint"></code></pre>
     <script src="changePseudo.js"></script>
   </body>
 </html>
