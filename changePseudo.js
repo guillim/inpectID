@@ -31,19 +31,17 @@ fetchID = async function(api,n8nURL,corsURL){
     headers:myHeaders
   })
 
-  // const reader = response.body.getReader();
+  // const reader = response.body.getReader(); // not possible with preflight request because of CORS and specific Headers
   const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
 
   let obj
   while (true) {
     const {value, done} = await reader.read();
-    
     if (done) break;
     obj = value
   }
   document.getElementById('code_for_json').innerHTML = JSON.stringify(JSON.parse(obj), null, "  ")
-
-  
+  Prism.highlightAll()  
 }
 
 
