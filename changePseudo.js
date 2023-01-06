@@ -30,7 +30,7 @@ fetchID = async function(api,n8nURL,corsURL){
     cache: 'default',
     headers:myHeaders
   })
-
+  document.getElementById('code_for_json').innerHTML = 'coming...'
   // const reader = response.body.getReader(); // not possible with preflight request because of CORS and specific Headers
   const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
 
@@ -40,6 +40,8 @@ fetchID = async function(api,n8nURL,corsURL){
     if (done) break;
     obj = value
   }
+  document.getElementById('code_for_json').innerHTML = 'coming.....'
+  console.log(obj);
   document.getElementById('code_for_json').innerHTML = JSON.stringify(JSON.parse(obj), null, "  ")
   Prism.highlightAll()  
 }
